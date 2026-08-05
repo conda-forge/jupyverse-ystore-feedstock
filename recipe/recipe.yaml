@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.1.1"
+  version: "0.1.2"
 
 package:
   name: jupyverse-ystore
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/j/jupyverse-ystore/jupyverse_ystore-${{ version }}.tar.gz
-    sha256: 204ebc78418e99adbb112940040088219060dc0d1a249ae4a1b376ec6a062b95
+    sha256: f1d81b43d252d62c16759ad00521c30e56a98cab0a278531ccff12ca8d165d04
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - uv-build
+    - uv-build >=0.11.32,<0.12
   run:
     - python >=${{ python_min }}
     - pycrdt
